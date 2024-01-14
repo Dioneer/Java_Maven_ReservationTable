@@ -23,7 +23,17 @@ public class BookingPresenter implements Observer{
        int reservationNo = model.reservationTable(reserve,tableNo,name);
        updReservationResultUI(reservationNo);
     }
+
+    @Override
+    public void onRemoveReservationTable(String reserveDate, int tableNo, String name) {
+        int removeReservationNo = model.removeReservationTable(reserveDate,tableNo,name);
+        updRemoveReservationResultUI(removeReservationNo);
+    }
+
     public void updReservationResultUI(int reservationNo){
         view.showReservationResultUI(reservationNo);
+    }
+    public void updRemoveReservationResultUI(int result){
+    view.showRemoveReservationResultUI(result);
     }
 }

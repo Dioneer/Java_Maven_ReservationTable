@@ -7,4 +7,5 @@ public interface View{
     void showTables(List<Table> tableList);
     void setObserver(Observer observer);
     void showReservationResultUI(int reservationNo);
+    void showRemoveReservationResultUI(int result);
 }
